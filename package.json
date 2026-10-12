@@ -1,0 +1,102 @@
+{
+  "name": "@hey-research-lab/virtuals-plugin",
+  "version": "0.1.0",
+  "description": "Virtuals Protocol GAME worker and ACP provider scaffold for HEY Research Lab: evidence-backed builder research on Robinhood Chain projects, tickers and contracts \u2014 still building, what shipped, what is unknown.",
+  "license": "MIT",
+  "author": "HEY Research Lab",
+  "type": "module",
+  "sideEffects": false,
+  "homepage": "https://heyresearch.xyz/developers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hey-research-lab/hey-virtuals-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hey-research-lab/hey-virtuals-plugin/issues"
+  },
+  "keywords": [
+    "hey-research",
+    "robinhood-chain",
+    "virtuals",
+    "virtuals-protocol",
+    "game",
+    "acp",
+    "ai-agents",
+    "builders",
+    "ships"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./acp": {
+      "import": {
+        "types": "./dist/acp.d.ts",
+        "default": "./dist/acp.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@9.15.1",
+  "scripts": {
+    "build": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\" && tsup",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "scan": "node scripts/scan.mjs .",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@hey-research-lab/sdk": "^0.2.0"
+  },
+  "peerDependencies": {
+    "@virtuals-protocol/game": "^0.1.14",
+    "@virtuals-protocol/acp-node-v2": "^0.1.15"
+  },
+  "peerDependenciesMeta": {
+    "@virtuals-protocol/acp-node-v2": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.0",
+    "@virtuals-protocol/acp-node-v2": "0.1.15",
+    "@virtuals-protocol/game": "0.1.14",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^4.1.11"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild": "^0.28.1"
+    }
+  }
+}
