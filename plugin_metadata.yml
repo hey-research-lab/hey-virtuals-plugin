@@ -1,0 +1,25 @@
+# Metadata for a listing in github.com/game-by-virtuals/game-node (plugins/<name>/plugin_metadata.yml),
+# following its plugins/plugin_metadata_template.yml.
+
+# General Information
+plugin_name: 'HEY Research (Robinhood Chain builders)'
+author: 'HEY Research Lab'
+logo_url: ''
+release_date: '2026-10'
+
+# Description
+short_description: 'Evidence-backed builder research on Robinhood Chain projects, tickers and contracts: still building, what shipped, what changed, what is unknown.'
+detailed_description: "A GAME worker with five functions over HEY Research Lab's public API (heyresearch.xyz): research a Robinhood Chain (chain 4663) project by slug, $TICKER, name or 0x contract (activity status, last meaningful ship, Build Momentum, Still Building, token verification, unknowns); find projects in HEY's index; what changed recently on the chain or for one project, from HEY's change ledger; a project's ships and timeline; and the chain day by day. Every answer carries evidence ids, the HEY project link, its as-of time and an attribution line. Market figures are context only. It never gives price advice or a safety verdict and treats a missing value as unknown, never zero. No API key needed. Optional: an Agent Commerce Protocol provider scaffold offering the same research as a job."
+
+# Media & Assets
+plugin_logo_url: ''
+screenshots:
+  - ''
+demo_video_url: ''
+documentation_url: 'https://github.com/hey-research-lab/hey-virtuals-plugin#readme'
+changelog_url: 'https://github.com/hey-research-lab/hey-virtuals-plugin/blob/main/CHANGELOG.md'
+
+# Contact & Support
+x_account_handle: '@HeyResearch'
+support_contact: 'hi@heyresearch.xyz'
+community_url: 'https://heyresearch.xyz/developers'
