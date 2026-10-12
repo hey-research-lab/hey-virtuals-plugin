@@ -1,0 +1,715 @@
+{
+  "request": {
+    "path": "/api/agent/research_project",
+    "params": {
+      "project": "musepass-musepass"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "5dc752ab-c408-417f-8f4e-720c50bf458e",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "schema": "hey.agent-intelligence-response",
+      "schemaVersion": "1",
+      "capability": "research_project",
+      "status": "ok",
+      "query": {
+        "chainId": 4663,
+        "project": "musepass-musepass"
+      },
+      "chain": {
+        "chainId": 4663,
+        "name": "Robinhood Chain"
+      },
+      "subject": {
+        "kind": "project",
+        "project": {
+          "slug": "musepass-musepass",
+          "name": {
+            "text": "musepass",
+            "contentOrigin": "external_source",
+            "source": "project_record"
+          },
+          "url": "https://heyresearch.xyz/project/musepass-musepass"
+        }
+      },
+      "answer": {
+        "text": "musepass-musepass: activity status ACTIVE, last meaningful ship 2026-10-02; 1 meaningful event in 30 days. HEY lists 2 things it does not know (1 NOT_MEASURED, 1 NOT_VERIFIED) under unknowns.",
+        "contentOrigin": "derived"
+      },
+      "answerStatus": "DERIVED",
+      "claims": [
+        {
+          "id": "summary.build",
+          "dimension": "build",
+          "statement": {
+            "text": "Active: 1 meaningful event in 30 days; latest ship 10 days ago.",
+            "contentOrigin": "derived"
+          },
+          "status": "DERIVED",
+          "value": null,
+          "source": {
+            "name": "hey",
+            "type": "hey_rule"
+          },
+          "observedAt": "2026-10-02T14:13:07.000Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "weekly",
+          "evidence": [
+            {
+              "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "sourceUrl": "https://github.com/musepass/musepass"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/timeline",
+          "evidenceKind": "evidence_record"
+        },
+        {
+          "id": "summary.usage",
+          "dimension": "usage",
+          "statement": {
+            "text": "No contract is recorded for this project, so there is no on-chain usage to count.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": null,
+          "source": {
+            "name": "decoded contract calls",
+            "type": "chain"
+          },
+          "observedAt": null,
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "unknown",
+          "evidence": [],
+          "explainUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/usage",
+          "reason": "no_contract",
+          "contextOnly": true,
+          "evidenceKind": "coverage_state"
+        },
+        {
+          "id": "summary.market",
+          "dimension": "market",
+          "statement": {
+            "text": "No token recorded: this is a project, not a token.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": null,
+          "source": {
+            "name": "market readings",
+            "type": "market_provider"
+          },
+          "observedAt": null,
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "unknown",
+          "evidence": [],
+          "explainUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/market",
+          "reason": "no_token",
+          "contextOnly": true,
+          "evidenceKind": "registry_record"
+        },
+        {
+          "id": "summary.latestChange",
+          "dimension": "latestChange",
+          "statement": {
+            "text": "5 days ago: Links the official site declares changed: 9 added, 5 removed.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": null,
+          "source": {
+            "name": "Official site",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-07T20:02:41.346Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "weekly",
+          "evidence": [
+            {
+              "id": "sourcechange:25cfe35d-80d9-47ce-9558-981ac807dc7b",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/sourcechange%3A25cfe35d-80d9-47ce-9558-981ac807dc7b",
+              "sourceUrl": "https://musepass.xyz/docs"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/changes?project=musepass-musepass",
+          "evidenceKind": "evidence_record"
+        },
+        {
+          "id": "summary.unknown",
+          "dimension": "unknown",
+          "statement": {
+            "text": "1 gap: API description (no source). Its website links no API description.",
+            "contentOrigin": "derived"
+          },
+          "status": "UNKNOWN",
+          "value": null,
+          "source": null,
+          "observedAt": null,
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "unknown",
+          "evidence": [],
+          "explainUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/coverage",
+          "reason": "no_api_description_linked",
+          "evidenceKind": "not_held"
+        },
+        {
+          "id": "build.activity_status",
+          "dimension": "build",
+          "statement": {
+            "text": "Activity status ACTIVE under HEY's activity rule (hbm-v28).",
+            "contentOrigin": "derived"
+          },
+          "status": "DERIVED",
+          "value": "ACTIVE",
+          "source": {
+            "name": "hey",
+            "type": "hey_rule"
+          },
+          "observedAt": "2026-10-12T13:54:27.413Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "recent",
+          "evidence": [
+            {
+              "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/explain?fact=activity.status",
+          "evidenceKind": "rule_output"
+        },
+        {
+          "id": "build.last_meaningful_ship",
+          "dimension": "build",
+          "statement": {
+            "text": "The newest meaningful ship HEY recorded is dated 2026-10-02.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": "2026-10-02T14:13:07.000Z",
+          "source": {
+            "name": "builder sources",
+            "type": "builder_source"
+          },
+          "observedAt": "2026-10-12T13:54:27.413Z",
+          "occurredAt": "2026-10-02T14:13:07.000Z",
+          "precision": "WEEK",
+          "freshness": "recent",
+          "evidence": [
+            {
+              "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "sourceUrl": "https://github.com/musepass/musepass"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/explain?fact=activity.status",
+          "evidenceKind": "evidence_record"
+        },
+        {
+          "id": "build.meaningful_events_30d",
+          "dimension": "build",
+          "statement": {
+            "text": "1 meaningful building event in the last 30 days.",
+            "contentOrigin": "derived"
+          },
+          "status": "DERIVED",
+          "value": 1,
+          "source": {
+            "name": "hey",
+            "type": "hey_rule"
+          },
+          "observedAt": "2026-10-12T13:54:27.413Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "recent",
+          "evidence": [
+            {
+              "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "sourceUrl": "https://github.com/musepass/musepass"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/explain?fact=activity.status",
+          "evidenceKind": "rule_output"
+        },
+        {
+          "id": "build.momentum",
+          "dimension": "build",
+          "statement": {
+            "text": "Build Momentum 22.4 (0–100, from development evidence only; never price).",
+            "contentOrigin": "derived"
+          },
+          "status": "DERIVED",
+          "value": 22.4,
+          "source": {
+            "name": "hey",
+            "type": "hey_rule"
+          },
+          "observedAt": "2026-10-12T13:54:27.413Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "recent",
+          "evidence": [
+            {
+              "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1"
+            }
+          ],
+          "explainUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/explain?fact=build.momentum",
+          "evidenceKind": "rule_output"
+        },
+        {
+          "id": "build.still_building",
+          "dimension": "build",
+          "statement": {
+            "text": "Still Building is not measured for this project: the project has no tracked token, so there is no market drawdown to measure.",
+            "contentOrigin": "hey"
+          },
+          "status": "UNKNOWN",
+          "value": null,
+          "source": null,
+          "observedAt": "2026-10-12T13:54:27.413Z",
+          "occurredAt": null,
+          "precision": null,
+          "freshness": "recent",
+          "evidence": [],
+          "reason": "no_token",
+          "explainUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/explain?fact=still_building",
+          "evidenceKind": "not_held"
+        }
+      ],
+      "unknowns": [
+        {
+          "category": "NOT_VERIFIED",
+          "dimension": "projectOwner",
+          "statement": {
+            "text": "No owner has proved control of this project’s site, repository or contract to HEY.",
+            "contentOrigin": "hey"
+          },
+          "doNotConclude": {
+            "text": "HEY has not verified this link. Do not treat it as the project’s own, and do not treat it as false either.",
+            "contentOrigin": "hey"
+          },
+          "reason": "owner_not_verified"
+        },
+        {
+          "category": "NOT_MEASURED",
+          "dimension": "apiDocs",
+          "statement": {
+            "text": "Its website links no API description.",
+            "contentOrigin": "hey"
+          },
+          "doNotConclude": {
+            "text": "HEY has not measured this. Do not read it as zero, as absent or as negative evidence about the project.",
+            "contentOrigin": "hey"
+          },
+          "coverageState": "NO_SOURCE",
+          "reason": "no_api_description_linked",
+          "asOf": "2026-10-08T03:02:21.958Z",
+          "detailUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/coverage"
+        }
+      ],
+      "freshness": [
+        {
+          "family": "builder_sources",
+          "observedAt": "2026-10-12T14:45:33.344Z",
+          "dataAsOf": "2026-10-12T14:45:33.344Z",
+          "freshnessStatus": "recent",
+          "staleAfterHours": 72,
+          "refresh": {
+            "job": "REFRESH_GITHUB",
+            "everyMinutes": 60,
+            "slowestMinutes": 4320,
+            "basis": {
+              "text": "Repositories, release feeds and changelogs are re-read by refresh tier (HOT hourly, WARM every 6 hours, COOL daily, COLD every 3 days); the tier follows the activity status and the last meaningful ship. A failing source backs off. A reading is stale after 72 hours, or one and a half cadences of its tier where that is longer (108 hours on COLD).",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": "2026-10-12T20:45:33.344Z"
+        },
+        {
+          "family": "activity_score",
+          "observedAt": "2026-10-12T13:54:27.413Z",
+          "dataAsOf": "2026-10-12T13:54:27.413Z",
+          "freshnessStatus": "recent",
+          "staleAfterHours": 24,
+          "refresh": {
+            "job": "RECALCULATE_SCORES",
+            "everyMinutes": 720,
+            "slowestMinutes": 720,
+            "basis": {
+              "text": "A project is due for rescoring once its score is 12 hours old (RESCORE_MIN_INTERVAL_HOURS); a newly recorded ship queues a rescore within the quarter hour. The next refresh is the latest expected time, not a promise: a backlog can delay it.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": "2026-10-13T01:54:27.413Z"
+        },
+        {
+          "family": "usage",
+          "observedAt": null,
+          "dataAsOf": null,
+          "freshnessStatus": "unknown",
+          "staleAfterHours": 72,
+          "refresh": {
+            "job": "ROLLUP_USAGE_DAYS",
+            "everyMinutes": 360,
+            "slowestMinutes": 360,
+            "basis": {
+              "text": "Product usage is rolled up from decoded calls every 6 hours, per UTC day, for contracts in the method watch.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": null,
+          "nextExpectedRefreshReason": "never_read"
+        },
+        {
+          "family": "peers",
+          "observedAt": "2026-10-12T02:04:19.479Z",
+          "dataAsOf": "2026-10-12T02:04:19.479Z",
+          "freshnessStatus": "daily",
+          "staleAfterHours": 36,
+          "refresh": {
+            "job": "REFRESH_PEER_CONTEXT",
+            "everyMinutes": 1440,
+            "slowestMinutes": 1440,
+            "basis": {
+              "text": "Peer cohorts are recomputed once a day.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": "2026-10-13T02:04:19.479Z"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+          "sourceUrl": "https://github.com/musepass/musepass"
+        },
+        {
+          "id": "sourcechange:25cfe35d-80d9-47ce-9558-981ac807dc7b",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/sourcechange%3A25cfe35d-80d9-47ce-9558-981ac807dc7b",
+          "sourceUrl": "https://musepass.xyz/docs"
+        },
+        {
+          "id": "state:657d1cd1-3c51-485e-ac78-ded87696e5bc:activity_status:26891",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/state%3A657d1cd1-3c51-485e-ac78-ded87696e5bc%3Aactivity_status%3A26891"
+        },
+        {
+          "id": "source:0024ace9-b9f8-43f0-9af0-191008f0a18f",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/source%3A0024ace9-b9f8-43f0-9af0-191008f0a18f",
+          "sourceUrl": "https://musepass.xyz/docs/reference/mcp"
+        },
+        {
+          "id": "source:bf19435c-d762-43e6-953c-0f16745f20aa",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/source%3Abf19435c-d762-43e6-953c-0f16745f20aa",
+          "sourceUrl": "https://musepass.xyz/docs/reference/api"
+        }
+      ],
+      "data": {
+        "identity": {
+          "slug": "musepass-musepass",
+          "name": {
+            "text": "musepass",
+            "contentOrigin": "external_source",
+            "source": "project_record"
+          },
+          "symbol": null,
+          "projectKind": "OTHER",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "narrative": {
+            "slug": "ai-agents",
+            "name": {
+              "text": "AI Agents",
+              "contentOrigin": "derived"
+            }
+          },
+          "firstRecordedByHeyAt": "2026-10-01T00:09:08.310Z",
+          "websiteUrl": "https://musepass.xyz",
+          "url": "https://heyresearch.xyz/project/musepass-musepass"
+        },
+        "builderState": {
+          "activityStatus": "ACTIVE",
+          "activityMeasured": true,
+          "lastMeaningfulShipAt": "2026-10-02T14:13:07.000Z",
+          "meaningfulEvents30d": 1,
+          "buildMomentum": 22.4,
+          "stillBuilding": false,
+          "stillBuildingWithheld": "no_token",
+          "stillBuildingState": "NOT_MEASURED",
+          "scoringVersion": "hbm-v28",
+          "explainUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/explain?fact=activity.status"
+        },
+        "latestMeaningfulChange": {
+          "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+          "revision": 13,
+          "type": "build.code_activity",
+          "domain": "build",
+          "occurredAt": "2026-10-02T14:13:07.000Z",
+          "precision": "WEEK",
+          "detectedAt": "2026-10-01T00:16:50.907Z",
+          "recordedAt": "2026-10-03T09:40:09.410Z",
+          "summary": {
+            "text": "Code changes, week of 2026-09-28 – 2026-10-04",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "countsAsBuilding": true,
+          "project": {
+            "slug": "musepass-musepass",
+            "url": "https://heyresearch.xyz/project/musepass-musepass"
+          },
+          "evidence": [
+            {
+              "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "sourceUrl": "https://github.com/musepass/musepass"
+            }
+          ],
+          "source": "github"
+        },
+        "recentChanges": {
+          "available": true,
+          "items": [
+            {
+              "id": "state:657d1cd1-3c51-485e-ac78-ded87696e5bc:activity_status:26891",
+              "revision": 1,
+              "type": "build.status_changed",
+              "domain": "build",
+              "occurredAt": null,
+              "precision": "OBSERVED",
+              "detectedAt": "2026-10-10T07:09:41.095Z",
+              "recordedAt": "2026-10-10T07:10:01.136Z",
+              "summary": {
+                "text": "Activity status moved from Shipping to Active",
+                "contentOrigin": "derived"
+              },
+              "status": "DERIVED",
+              "countsAsBuilding": false,
+              "project": {
+                "slug": "musepass-musepass",
+                "url": "https://heyresearch.xyz/project/musepass-musepass"
+              },
+              "evidence": [
+                {
+                  "id": "state:657d1cd1-3c51-485e-ac78-ded87696e5bc:activity_status:26891",
+                  "receiptUrl": "https://heyresearch.xyz/api/evidence/state%3A657d1cd1-3c51-485e-ac78-ded87696e5bc%3Aactivity_status%3A26891"
+                }
+              ],
+              "source": "hey_state"
+            },
+            {
+              "id": "source:0024ace9-b9f8-43f0-9af0-191008f0a18f:added",
+              "revision": 1,
+              "type": "research.source_added",
+              "domain": "research",
+              "occurredAt": null,
+              "precision": "OBSERVED",
+              "detectedAt": "2026-10-07T20:05:15.661Z",
+              "recordedAt": "2026-10-07T20:06:04.014Z",
+              "summary": {
+                "text": "Official source added: docs",
+                "contentOrigin": "derived"
+              },
+              "status": "FACT",
+              "countsAsBuilding": false,
+              "project": {
+                "slug": "musepass-musepass",
+                "url": "https://heyresearch.xyz/project/musepass-musepass"
+              },
+              "evidence": [
+                {
+                  "id": "source:0024ace9-b9f8-43f0-9af0-191008f0a18f",
+                  "receiptUrl": "https://heyresearch.xyz/api/evidence/source%3A0024ace9-b9f8-43f0-9af0-191008f0a18f",
+                  "sourceUrl": "https://musepass.xyz/docs/reference/mcp"
+                }
+              ],
+              "source": "website_crawl"
+            },
+            {
+              "id": "sourcechange:25cfe35d-80d9-47ce-9558-981ac807dc7b",
+              "revision": 1,
+              "type": "research.source_changed",
+              "domain": "research",
+              "occurredAt": null,
+              "precision": "OBSERVED",
+              "detectedAt": "2026-10-07T20:02:41.346Z",
+              "recordedAt": "2026-10-07T20:06:04.014Z",
+              "summary": {
+                "text": "Links the official site declares changed: 9 added, 5 removed",
+                "contentOrigin": "derived"
+              },
+              "status": "FACT",
+              "countsAsBuilding": false,
+              "project": {
+                "slug": "musepass-musepass",
+                "url": "https://heyresearch.xyz/project/musepass-musepass"
+              },
+              "evidence": [
+                {
+                  "id": "sourcechange:25cfe35d-80d9-47ce-9558-981ac807dc7b",
+                  "receiptUrl": "https://heyresearch.xyz/api/evidence/sourcechange%3A25cfe35d-80d9-47ce-9558-981ac807dc7b",
+                  "sourceUrl": "https://musepass.xyz/docs"
+                }
+              ],
+              "source": "official_site"
+            },
+            {
+              "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "revision": 13,
+              "type": "build.code_activity",
+              "domain": "build",
+              "occurredAt": "2026-10-02T14:13:07.000Z",
+              "precision": "WEEK",
+              "detectedAt": "2026-10-01T00:16:50.907Z",
+              "recordedAt": "2026-10-03T09:40:09.410Z",
+              "summary": {
+                "text": "Code changes, week of 2026-09-28 – 2026-10-04",
+                "contentOrigin": "derived"
+              },
+              "status": "FACT",
+              "countsAsBuilding": true,
+              "project": {
+                "slug": "musepass-musepass",
+                "url": "https://heyresearch.xyz/project/musepass-musepass"
+              },
+              "evidence": [
+                {
+                  "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+                  "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+                  "sourceUrl": "https://github.com/musepass/musepass"
+                }
+              ],
+              "source": "github"
+            },
+            {
+              "id": "source:bf19435c-d762-43e6-953c-0f16745f20aa:added",
+              "revision": 1,
+              "type": "research.source_added",
+              "domain": "research",
+              "occurredAt": null,
+              "precision": "OBSERVED",
+              "detectedAt": "2026-10-02T07:09:22.391Z",
+              "recordedAt": "2026-10-02T07:13:21.930Z",
+              "summary": {
+                "text": "Official source added: docs",
+                "contentOrigin": "derived"
+              },
+              "status": "FACT",
+              "countsAsBuilding": false,
+              "project": {
+                "slug": "musepass-musepass",
+                "url": "https://heyresearch.xyz/project/musepass-musepass"
+              },
+              "evidence": [
+                {
+                  "id": "source:bf19435c-d762-43e6-953c-0f16745f20aa",
+                  "receiptUrl": "https://heyresearch.xyz/api/evidence/source%3Abf19435c-d762-43e6-953c-0f16745f20aa",
+                  "sourceUrl": "https://musepass.xyz/docs/reference/api"
+                }
+              ],
+              "source": "website_crawl"
+            }
+          ],
+          "url": "https://heyresearch.xyz/api/changes?project=musepass-musepass"
+        },
+        "contractIdentity": {
+          "token": null,
+          "ownerVerified": false,
+          "contractsUrl": "https://heyresearch.xyz/api/projects/musepass-musepass/contracts"
+        },
+        "marketContext": null,
+        "usageContext": {
+          "contextOnly": true,
+          "state": "NOT_APPLICABLE",
+          "reason": "no_contract",
+          "windowDays": 7,
+          "calls": null,
+          "activeContracts": null,
+          "watchedContracts": 0,
+          "observedAt": null,
+          "url": "https://heyresearch.xyz/api/projects/musepass-musepass/usage"
+        }
+      },
+      "methodology": {
+        "rules": [
+          {
+            "id": "activity.status",
+            "version": "hbm-v28"
+          },
+          {
+            "id": "research_summary",
+            "version": "summary-v1"
+          },
+          {
+            "id": "peers",
+            "version": "peers-v1"
+          },
+          {
+            "id": "agent_freshness",
+            "version": "agent-freshness-v2"
+          },
+          {
+            "id": "machine_text",
+            "version": "machine-text-v1"
+          }
+        ],
+        "url": "https://heyresearch.xyz/methodology"
+      },
+      "links": {
+        "self": "https://heyresearch.xyz/api/agent/research_project?project=musepass-musepass",
+        "page": "https://heyresearch.xyz/project/musepass-musepass",
+        "canonical": [
+          "https://heyresearch.xyz/api/projects/musepass-musepass/snapshot",
+          "https://heyresearch.xyz/api/projects/musepass-musepass/coverage",
+          "https://heyresearch.xyz/api/projects/musepass-musepass/explain",
+          "https://heyresearch.xyz/api/changes?project=musepass-musepass"
+        ]
+      },
+      "citation": {
+        "kind": "hey_agent_answer",
+        "capability": "research_project",
+        "schemaVersion": "1",
+        "url": "https://heyresearch.xyz/api/agent/research_project?project=musepass-musepass",
+        "asOf": "2026-10-12T19:51:44.997Z",
+        "project": "musepass-musepass",
+        "scoringVersion": "hbm-v28"
+      },
+      "boundaries": {
+        "notAdvice": true,
+        "notProvided": [
+          "investment_recommendation",
+          "buy_or_sell_signal",
+          "price_prediction",
+          "price_target",
+          "position_size",
+          "leverage",
+          "stop_loss",
+          "ranking_by_expected_return",
+          "risk_score",
+          "safety_verdict",
+          "smart_money_label",
+          "wallet_pnl",
+          "wallet_profile"
+        ],
+        "marketIsContextOnly": true,
+        "disclaimer": {
+          "text": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts.",
+          "contentOrigin": "hey"
+        }
+      },
+      "asOf": "2026-10-12T19:51:44.997Z"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "_note": "Synthetic: hand-written to exercise a path the live API cannot be asked for politely. Shapes follow the public API.",
+  "request": {
+    "path": "/api/search/suggest",
+    "params": {
+      "q": "Example Agent"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "q": "Example Agent",
+      "suggestions": [
+        {
+          "type": "project",
+          "name": "Example Agent",
+          "symbol": "EXA",
+          "contract": "0x0000000000000000000000000000000000000002",
+          "target": "/project/example-agent",
+          "status": "Active"
+        },
+        {
+          "type": "project",
+          "name": "Example Agent",
+          "target": "/project/example-agent-2",
+          "status": "Dormant",
+          "sameNameDifferentContract": true
+        },
+        {
+          "type": "launch",
+          "name": "Example Agent",
+          "symbol": "EXA",
+          "contract": "0x0000000000000000000000000000000000000003",
+          "launchedVia": "Virtuals",
+          "target": "/search?q=0x0000000000000000000000000000000000000003",
+          "brandNotice": {
+            "kind": "stock_ticker",
+            "title": "Not affiliated with Robinhood",
+            "detail": "The ticker borrows a stock token ticker."
+          }
+        },
+        {
+          "type": "issuer",
+          "name": "Example Stock Token",
+          "symbol": "EXS",
+          "contract": "0x0000000000000000000000000000000000000004",
+          "label": "Robinhood stock token \u00b7 issued by Robinhood",
+          "match": "name",
+          "target": "/scan/0x0000000000000000000000000000000000000004"
+        }
+      ],
+      "moreLaunchRecords": true
+    }
+  }
+}

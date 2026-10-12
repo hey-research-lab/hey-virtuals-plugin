@@ -1,0 +1,36 @@
+{
+  "request": {
+    "path": "/api/search/suggest",
+    "params": {
+      "q": "musepass"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "f21ca82f-f480-4c15-a83c-bcfae6729d95",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "q": "musepass",
+      "suggestions": [
+        {
+          "type": "project",
+          "name": "musepass",
+          "target": "/project/musepass-musepass",
+          "status": "Active · Verified Builder"
+        },
+        {
+          "type": "launch",
+          "name": "MusePass",
+          "symbol": "MuseUp",
+          "contract": "0x89e036fb7aed14022f3009af027a62835f60eba3",
+          "launchedVia": "Unknown",
+          "target": "/search?q=0x89e036fb7aed14022f3009af027a62835f60eba3"
+        }
+      ],
+      "moreLaunchRecords": false
+    }
+  }
+}

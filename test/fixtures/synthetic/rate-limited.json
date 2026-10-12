@@ -1,0 +1,25 @@
+{
+  "_note": "Synthetic: hand-written to exercise a path the live API cannot be asked for politely. Shapes follow the public API.",
+  "request": {
+    "path": "/api/agent/research_project",
+    "params": {
+      "project": "agentos"
+    }
+  },
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-type": "application/json",
+      "x-hey-api-version": "1",
+      "retry-after": "12",
+      "x-request-id": "00000000-0000-4000-8000-000000000429"
+    },
+    "body": {
+      "error": "rate_limited",
+      "message": "Too many requests. Try again in 12 seconds.",
+      "requestId": "00000000-0000-4000-8000-000000000429",
+      "retryable": true,
+      "retryAfterSeconds": 12
+    }
+  }
+}

@@ -1,0 +1,1115 @@
+{
+  "request": {
+    "path": "/api/agent/what_changed",
+    "params": {
+      "days": "7",
+      "limit": "5"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "38ae210c-ae68-4367-aad0-025b9f4bc8ab",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "schema": "hey.agent-intelligence-response",
+      "schemaVersion": "1",
+      "capability": "what_changed",
+      "status": "ok",
+      "query": {
+        "chainId": 4663,
+        "days": 7,
+        "limit": 5
+      },
+      "chain": {
+        "chainId": 4663,
+        "name": "Robinhood Chain"
+      },
+      "subject": {
+        "kind": "chain"
+      },
+      "answer": {
+        "text": "6546 changes recorded for Robinhood Chain projects in the last 7 days. 292 count as building (181 weeks of code activity, 81 releases, 29 follow-up contract deployments, 1 ship); the other 6254 are context and HEY’s own records (1986 market status changes, 1118 liquidity moves, 497 research publications, 391 source changes, …). Showing the newest 5 of every type; ask with building=only for building alone.",
+        "contentOrigin": "derived"
+      },
+      "answerStatus": "FACT",
+      "claims": [
+        {
+          "id": "window.counts_as_building",
+          "dimension": "build",
+          "statement": {
+            "text": "292 of 6546 changes count toward activity status in the 7-day window.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 292,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            },
+            {
+              "id": "ship:3c614da4-b108-469e-8ada-736b7e763345",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A3c614da4-b108-469e-8ada-736b7e763345",
+              "sourceUrl": "https://github.com/bambini-tech/digitaldon-public/releases/tag/dido/v0.28.0"
+            }
+          ],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.market.status_changed",
+          "dimension": "market",
+          "statement": {
+            "text": "1986 market status changes in the 7-day window (market.status_changed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 1986,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count",
+          "contextOnly": true
+        },
+        {
+          "id": "window.market.liquidity_moved",
+          "dimension": "market",
+          "statement": {
+            "text": "1118 liquidity moves in the 7-day window (market.liquidity_moved).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 1118,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count",
+          "contextOnly": true
+        },
+        {
+          "id": "window.research.published",
+          "dimension": "research",
+          "statement": {
+            "text": "497 research publications in the 7-day window (research.published).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 497,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [
+            {
+              "id": "state:43378f78-33c9-4591-95ce-c6b3fa615964:catalog_status:30178",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/state%3A43378f78-33c9-4591-95ce-c6b3fa615964%3Acatalog_status%3A30178"
+            },
+            {
+              "id": "state:696e54d6-309d-4f8a-b3e4-d50c6c0c2ae4:catalog_status:30154",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/state%3A696e54d6-309d-4f8a-b3e4-d50c6c0c2ae4%3Acatalog_status%3A30154"
+            }
+          ],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.research.source_changed",
+          "dimension": "research",
+          "statement": {
+            "text": "391 source changes in the 7-day window (research.source_changed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 391,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.research.source_added",
+          "dimension": "research",
+          "statement": {
+            "text": "352 sources added in the 7-day window (research.source_added).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 352,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.research.narrative_assigned",
+          "dimension": "research",
+          "statement": {
+            "text": "321 narrative assignments in the 7-day window (research.narrative_assigned).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 321,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.market_integrity.event",
+          "dimension": "market_integrity",
+          "statement": {
+            "text": "316 market-integrity events in the 7-day window (market_integrity.event).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 316,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count",
+          "contextOnly": true
+        },
+        {
+          "id": "window.build.code_activity",
+          "dimension": "build",
+          "statement": {
+            "text": "238 weeks of code activity in the 7-day window (build.code_activity).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 238,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [
+            {
+              "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+              "sourceUrl": "https://github.com/builder-one/courierworld"
+            }
+          ],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.build.status_changed",
+          "dimension": "build",
+          "statement": {
+            "text": "236 activity status changes in the 7-day window (build.status_changed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 236,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.market.distribution_changed",
+          "dimension": "market",
+          "statement": {
+            "text": "170 distribution changes in the 7-day window (market.distribution_changed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 170,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count",
+          "contextOnly": true
+        },
+        {
+          "id": "window.build.release",
+          "dimension": "build",
+          "statement": {
+            "text": "147 releases in the 7-day window (build.release).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 147,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [
+            {
+              "id": "ship:3c614da4-b108-469e-8ada-736b7e763345",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A3c614da4-b108-469e-8ada-736b7e763345",
+              "sourceUrl": "https://github.com/bambini-tech/digitaldon-public/releases/tag/dido/v0.28.0"
+            },
+            {
+              "id": "ship:ff4a14f0-8413-4e33-b6fa-32122149268c",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Aff4a14f0-8413-4e33-b6fa-32122149268c",
+              "sourceUrl": "https://github.com/bambini-tech/digitaldon-public/releases/tag/bot/v2.137.0"
+            }
+          ],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.contract.usage_changed",
+          "dimension": "contract",
+          "statement": {
+            "text": "141 usage changes in the 7-day window (contract.usage_changed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 141,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count",
+          "contextOnly": true
+        },
+        {
+          "id": "window.market.volume_spike",
+          "dimension": "market",
+          "statement": {
+            "text": "117 volume spikes in the 7-day window (market.volume_spike).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 117,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count",
+          "contextOnly": true
+        },
+        {
+          "id": "window.research.builder_verified",
+          "dimension": "research",
+          "statement": {
+            "text": "93 builder verifications in the 7-day window (research.builder_verified).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 93,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.contract.followup_deployed",
+          "dimension": "contract",
+          "statement": {
+            "text": "73 follow-up contract deployments in the 7-day window (contract.followup_deployed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 73,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.token.verification_changed",
+          "dimension": "token",
+          "statement": {
+            "text": "65 token verification changes in the 7-day window (token.verification_changed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 65,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.contract.deployed",
+          "dimension": "contract",
+          "statement": {
+            "text": "43 contract deployments in the 7-day window (contract.deployed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 43,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.contract.method_first_observed",
+          "dimension": "contract",
+          "statement": {
+            "text": "35 methods first observed in the 7-day window (contract.method_first_observed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 35,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count",
+          "contextOnly": true
+        },
+        {
+          "id": "window.contract.source_verified",
+          "dimension": "contract",
+          "statement": {
+            "text": "32 source verifications in the 7-day window (contract.source_verified).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 32,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.build.ship",
+          "dimension": "build",
+          "statement": {
+            "text": "31 ships in the 7-day window (build.ship).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 31,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.build.dormant",
+          "dimension": "build",
+          "statement": {
+            "text": "29 moves to dormant in the 7-day window (build.dormant).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 29,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.token.launch_stage_changed",
+          "dimension": "token",
+          "statement": {
+            "text": "21 launch stage changes in the 7-day window (token.launch_stage_changed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 21,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.build.accelerating",
+          "dimension": "build",
+          "statement": {
+            "text": "19 acceleration signals in the 7-day window (build.accelerating).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 19,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.lock.withdrawn",
+          "dimension": "lock",
+          "statement": {
+            "text": "17 lock withdrawals in the 7-day window (lock.withdrawn).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 17,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.research.source_unavailable",
+          "dimension": "research",
+          "statement": {
+            "text": "17 sources unavailable in the 7-day window (research.source_unavailable).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 17,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.lock.unlock_due",
+          "dimension": "lock",
+          "statement": {
+            "text": "15 scheduled unlocks in the 7-day window (lock.unlock_due).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 15,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.build.slowing",
+          "dimension": "build",
+          "statement": {
+            "text": "10 slowdown signals in the 7-day window (build.slowing).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 10,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.lock.observed",
+          "dimension": "lock",
+          "statement": {
+            "text": "7 locks observed in the 7-day window (lock.observed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 7,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.contract.method_resumed",
+          "dimension": "contract",
+          "statement": {
+            "text": "6 methods resumed in the 7-day window (contract.method_resumed).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 6,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count",
+          "contextOnly": true
+        },
+        {
+          "id": "window.research.source_restored",
+          "dimension": "research",
+          "statement": {
+            "text": "2 sources restored in the 7-day window (research.source_restored).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 2,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.research.owner_verified",
+          "dimension": "research",
+          "statement": {
+            "text": "1 owner verification in the 7-day window (research.owner_verified).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 1,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [],
+          "evidenceKind": "ledger_count"
+        }
+      ],
+      "unknowns": [],
+      "freshness": [
+        {
+          "family": "change_ledger",
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "dataAsOf": "2026-10-12T19:50:01.462Z",
+          "freshnessStatus": "live",
+          "staleAfterHours": 1,
+          "refresh": {
+            "job": "PROJECT_CHANGE_EVENTS",
+            "everyMinutes": 5,
+            "slowestMinutes": 5,
+            "basis": {
+              "text": "The ledger projector runs every 5 minutes and indexes what HEY recorded since its last run.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": "2026-10-12T19:55:01.462Z"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+          "sourceUrl": "https://github.com/builder-one/courierworld"
+        },
+        {
+          "id": "ship:3c614da4-b108-469e-8ada-736b7e763345",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A3c614da4-b108-469e-8ada-736b7e763345",
+          "sourceUrl": "https://github.com/bambini-tech/digitaldon-public/releases/tag/dido/v0.28.0"
+        },
+        {
+          "id": "state:43378f78-33c9-4591-95ce-c6b3fa615964:catalog_status:30178",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/state%3A43378f78-33c9-4591-95ce-c6b3fa615964%3Acatalog_status%3A30178"
+        },
+        {
+          "id": "state:696e54d6-309d-4f8a-b3e4-d50c6c0c2ae4:catalog_status:30154",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/state%3A696e54d6-309d-4f8a-b3e4-d50c6c0c2ae4%3Acatalog_status%3A30154"
+        },
+        {
+          "id": "ship:ff4a14f0-8413-4e33-b6fa-32122149268c",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Aff4a14f0-8413-4e33-b6fa-32122149268c",
+          "sourceUrl": "https://github.com/bambini-tech/digitaldon-public/releases/tag/bot/v2.137.0"
+        }
+      ],
+      "data": {
+        "scope": "chain",
+        "window": {
+          "days": 7,
+          "from": "2026-10-05T19:51:54.885Z",
+          "to": "2026-10-12T19:51:54.885Z",
+          "basis": "occurred_else_detected"
+        },
+        "types": null,
+        "total": 6546,
+        "countsAsBuilding": 292,
+        "byType": [
+          {
+            "type": "market.status_changed",
+            "count": 1986
+          },
+          {
+            "type": "market.liquidity_moved",
+            "count": 1118
+          },
+          {
+            "type": "research.published",
+            "count": 497
+          },
+          {
+            "type": "research.source_changed",
+            "count": 391
+          },
+          {
+            "type": "research.source_added",
+            "count": 352
+          },
+          {
+            "type": "research.narrative_assigned",
+            "count": 321
+          },
+          {
+            "type": "market_integrity.event",
+            "count": 316
+          },
+          {
+            "type": "build.code_activity",
+            "count": 238
+          },
+          {
+            "type": "build.status_changed",
+            "count": 236
+          },
+          {
+            "type": "market.distribution_changed",
+            "count": 170
+          },
+          {
+            "type": "build.release",
+            "count": 147
+          },
+          {
+            "type": "contract.usage_changed",
+            "count": 141
+          },
+          {
+            "type": "market.volume_spike",
+            "count": 117
+          },
+          {
+            "type": "research.builder_verified",
+            "count": 93
+          },
+          {
+            "type": "contract.followup_deployed",
+            "count": 73
+          },
+          {
+            "type": "token.verification_changed",
+            "count": 65
+          },
+          {
+            "type": "contract.deployed",
+            "count": 43
+          },
+          {
+            "type": "contract.method_first_observed",
+            "count": 35
+          },
+          {
+            "type": "contract.source_verified",
+            "count": 32
+          },
+          {
+            "type": "build.ship",
+            "count": 31
+          },
+          {
+            "type": "build.dormant",
+            "count": 29
+          },
+          {
+            "type": "token.launch_stage_changed",
+            "count": 21
+          },
+          {
+            "type": "build.accelerating",
+            "count": 19
+          },
+          {
+            "type": "lock.withdrawn",
+            "count": 17
+          },
+          {
+            "type": "research.source_unavailable",
+            "count": 17
+          },
+          {
+            "type": "lock.unlock_due",
+            "count": 15
+          },
+          {
+            "type": "build.slowing",
+            "count": 10
+          },
+          {
+            "type": "lock.observed",
+            "count": 7
+          },
+          {
+            "type": "contract.method_resumed",
+            "count": 6
+          },
+          {
+            "type": "research.source_restored",
+            "count": 2
+          },
+          {
+            "type": "research.owner_verified",
+            "count": 1
+          }
+        ],
+        "shown": 5,
+        "items": [
+          {
+            "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+            "revision": 12,
+            "type": "build.code_activity",
+            "domain": "build",
+            "occurredAt": "2026-10-12T19:23:25.000Z",
+            "precision": "WEEK",
+            "detectedAt": "2026-10-12T01:57:01.194Z",
+            "recordedAt": "2026-10-12T19:25:00.994Z",
+            "summary": {
+              "text": "Code changes, week of 2026-10-12 – 2026-10-18",
+              "contentOrigin": "derived"
+            },
+            "status": "FACT",
+            "countsAsBuilding": true,
+            "verification": "SOURCE_LINKED",
+            "project": {
+              "slug": "courier-world",
+              "url": "https://heyresearch.xyz/project/courier-world"
+            },
+            "evidence": [
+              {
+                "id": "ship:6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+                "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A6d9ec4f3-d4a4-468b-b6b0-f1717bb07632",
+                "sourceUrl": "https://github.com/builder-one/courierworld"
+              }
+            ],
+            "source": "github"
+          },
+          {
+            "id": "ship:3c614da4-b108-469e-8ada-736b7e763345",
+            "revision": 1,
+            "type": "build.release",
+            "domain": "build",
+            "occurredAt": "2026-10-12T19:12:32.000Z",
+            "precision": "EXACT",
+            "detectedAt": "2026-10-12T19:16:37.551Z",
+            "recordedAt": "2026-10-12T19:20:00.909Z",
+            "summary": {
+              "text": "dido/v0.28.0",
+              "contentOrigin": "external_source",
+              "source": "source_title",
+              "sourceUrl": "https://github.com/bambini-tech/digitaldon-public/releases/tag/dido/v0.28.0"
+            },
+            "status": "FACT",
+            "countsAsBuilding": true,
+            "verification": "PUBLICLY_VERIFIED",
+            "project": {
+              "slug": "digitaldon",
+              "url": "https://heyresearch.xyz/project/digitaldon"
+            },
+            "evidence": [
+              {
+                "id": "ship:3c614da4-b108-469e-8ada-736b7e763345",
+                "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A3c614da4-b108-469e-8ada-736b7e763345",
+                "sourceUrl": "https://github.com/bambini-tech/digitaldon-public/releases/tag/dido/v0.28.0"
+              }
+            ],
+            "source": "github"
+          },
+          {
+            "id": "ship:ff4a14f0-8413-4e33-b6fa-32122149268c",
+            "revision": 1,
+            "type": "build.release",
+            "domain": "build",
+            "occurredAt": "2026-10-12T19:12:29.000Z",
+            "precision": "EXACT",
+            "detectedAt": "2026-10-12T19:16:37.612Z",
+            "recordedAt": "2026-10-12T19:20:00.909Z",
+            "summary": {
+              "text": "bot/v2.137.0",
+              "contentOrigin": "external_source",
+              "source": "source_title",
+              "sourceUrl": "https://github.com/bambini-tech/digitaldon-public/releases/tag/bot/v2.137.0"
+            },
+            "status": "FACT",
+            "countsAsBuilding": false,
+            "verification": "PUBLICLY_VERIFIED",
+            "project": {
+              "slug": "digitaldon",
+              "url": "https://heyresearch.xyz/project/digitaldon"
+            },
+            "evidence": [
+              {
+                "id": "ship:ff4a14f0-8413-4e33-b6fa-32122149268c",
+                "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3Aff4a14f0-8413-4e33-b6fa-32122149268c",
+                "sourceUrl": "https://github.com/bambini-tech/digitaldon-public/releases/tag/bot/v2.137.0"
+              }
+            ],
+            "source": "github"
+          },
+          {
+            "id": "state:43378f78-33c9-4591-95ce-c6b3fa615964:catalog_status:30178",
+            "revision": 1,
+            "type": "research.published",
+            "domain": "research",
+            "occurredAt": null,
+            "precision": "OBSERVED",
+            "detectedAt": "2026-10-12T19:11:05.733Z",
+            "recordedAt": "2026-10-12T19:15:00.904Z",
+            "summary": {
+              "text": "Project page published",
+              "contentOrigin": "derived"
+            },
+            "status": "DERIVED",
+            "countsAsBuilding": false,
+            "project": {
+              "slug": "hookr-fun-18e674",
+              "url": "https://heyresearch.xyz/project/hookr-fun-18e674"
+            },
+            "evidence": [
+              {
+                "id": "state:43378f78-33c9-4591-95ce-c6b3fa615964:catalog_status:30178",
+                "receiptUrl": "https://heyresearch.xyz/api/evidence/state%3A43378f78-33c9-4591-95ce-c6b3fa615964%3Acatalog_status%3A30178"
+              }
+            ],
+            "source": "hey_state"
+          },
+          {
+            "id": "state:696e54d6-309d-4f8a-b3e4-d50c6c0c2ae4:catalog_status:30154",
+            "revision": 1,
+            "type": "research.published",
+            "domain": "research",
+            "occurredAt": null,
+            "precision": "OBSERVED",
+            "detectedAt": "2026-10-12T19:11:05.733Z",
+            "recordedAt": "2026-10-12T19:15:00.904Z",
+            "summary": {
+              "text": "Project page published",
+              "contentOrigin": "derived"
+            },
+            "status": "DERIVED",
+            "countsAsBuilding": false,
+            "project": {
+              "slug": "thinking-cat",
+              "url": "https://heyresearch.xyz/project/thinking-cat"
+            },
+            "evidence": [
+              {
+                "id": "state:696e54d6-309d-4f8a-b3e4-d50c6c0c2ae4:catalog_status:30154",
+                "receiptUrl": "https://heyresearch.xyz/api/evidence/state%3A696e54d6-309d-4f8a-b3e4-d50c6c0c2ae4%3Acatalog_status%3A30154"
+              }
+            ],
+            "source": "hey_state"
+          }
+        ],
+        "ledger": {
+          "projectorRanAt": "2026-10-12T19:50:01.462Z",
+          "newestRecordedAt": "2026-10-12T19:50:01.462Z",
+          "collectionStart": "2026-09-26T11:35:57.227Z",
+          "transitionsFrom": "2026-09-26T11:32:48.791Z"
+        },
+        "more": "https://heyresearch.xyz/api/changes"
+      },
+      "methodology": {
+        "rules": [
+          {
+            "id": "agent_freshness",
+            "version": "agent-freshness-v2"
+          },
+          {
+            "id": "machine_text",
+            "version": "machine-text-v1"
+          }
+        ],
+        "url": "https://heyresearch.xyz/methodology"
+      },
+      "links": {
+        "self": "https://heyresearch.xyz/api/agent/what_changed?days=7&limit=5",
+        "canonical": [
+          "https://heyresearch.xyz/api/changes"
+        ]
+      },
+      "citation": {
+        "kind": "hey_agent_answer",
+        "capability": "what_changed",
+        "schemaVersion": "1",
+        "url": "https://heyresearch.xyz/api/agent/what_changed?days=7&limit=5",
+        "asOf": "2026-10-12T19:51:54.885Z"
+      },
+      "boundaries": {
+        "notAdvice": true,
+        "notProvided": [
+          "investment_recommendation",
+          "buy_or_sell_signal",
+          "price_prediction",
+          "price_target",
+          "position_size",
+          "leverage",
+          "stop_loss",
+          "ranking_by_expected_return",
+          "risk_score",
+          "safety_verdict",
+          "smart_money_label",
+          "wallet_pnl",
+          "wallet_profile"
+        ],
+        "marketIsContextOnly": true,
+        "disclaimer": {
+          "text": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts.",
+          "contentOrigin": "hey"
+        }
+      },
+      "asOf": "2026-10-12T19:51:54.885Z"
+    }
+  }
+}

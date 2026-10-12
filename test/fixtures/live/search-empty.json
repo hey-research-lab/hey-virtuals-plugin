@@ -1,0 +1,21 @@
+{
+  "request": {
+    "path": "/api/search/suggest",
+    "params": {
+      "q": "zzqx-no-such-name"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "34df9f2b-eaad-48bd-9ba5-7f4ad7c34011",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "q": "zzqx-no-such-name",
+      "suggestions": [],
+      "moreLaunchRecords": false
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "request": {
+    "path": "/api/search/suggest",
+    "params": {
+      "q": "agentos"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "dc5d4435-6d66-4d3b-a057-e6c5ec054678",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "q": "agentos",
+      "suggestions": [
+        {
+          "type": "project",
+          "name": "AgentOS",
+          "symbol": "agentos",
+          "contract": "0x6eda83fc299c10d474068a7e69771c809bcbbba3",
+          "target": "/project/agentos",
+          "status": "Shipping · Verified Builder"
+        },
+        {
+          "type": "project",
+          "name": "agent-yield-buyback-hook",
+          "target": "/project/agentoshi-bot-agent-yield-buyback-hook",
+          "status": "Dormant"
+        },
+        {
+          "type": "launch",
+          "name": "AgentOS",
+          "symbol": "AGENTOS",
+          "contract": "0x4979bfa656fa2df69cb8e5d3bd6cb7e733d62a22",
+          "launchedVia": "Pons",
+          "target": "/search?q=0x4979bfa656fa2df69cb8e5d3bd6cb7e733d62a22"
+        },
+        {
+          "type": "launch",
+          "name": "AgentOS",
+          "symbol": "AGENTOS",
+          "contract": "0x3f2f87ddc8b576058a1f7d7928c384cf9a093651",
+          "launchedVia": "Pons",
+          "target": "/search?q=0x3f2f87ddc8b576058a1f7d7928c384cf9a093651"
+        },
+        {
+          "type": "launch",
+          "name": "Agent Os",
+          "symbol": "AGENTOS",
+          "contract": "0x096b878b87eefe9b29d445292ae97c2b22187777",
+          "launchedVia": "Flap",
+          "target": "/search?q=0x096b878b87eefe9b29d445292ae97c2b22187777"
+        },
+        {
+          "type": "launch",
+          "name": "AgentOS",
+          "symbol": "AGENTOS",
+          "contract": "0xd8f4e5580f6e857eb24e6c4302a081c8fe5c31e0",
+          "launchedVia": "Pools",
+          "target": "/search?q=0xd8f4e5580f6e857eb24e6c4302a081c8fe5c31e0"
+        },
+        {
+          "type": "launch",
+          "name": "AGENTOS",
+          "symbol": "AGENTOS",
+          "contract": "0x7d5b50dc7693c17db546dd04be7704082fd07777",
+          "launchedVia": "Flap",
+          "target": "/search?q=0x7d5b50dc7693c17db546dd04be7704082fd07777"
+        },
+        {
+          "type": "launch",
+          "name": "AgentOS",
+          "symbol": "AGENTOS",
+          "contract": "0x29bfe5cb7cc8ff3e733d7587be8fa42f98c784c1",
+          "launchedVia": "Unknown",
+          "target": "/search?q=0x29bfe5cb7cc8ff3e733d7587be8fa42f98c784c1"
+        }
+      ],
+      "moreLaunchRecords": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "request": {
+    "path": "/api/token/4663/0x0000000000000000000000000000000000000001",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "dfc4ecc6-e9e8-42f4-b823-cb4f75514adc",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "chainId": 4663,
+      "contractAddress": "0x0000000000000000000000000000000000000001",
+      "scanUrl": "https://heyresearch.xyz/scan/0x0000000000000000000000000000000000000001",
+      "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts.",
+      "status": "unknown"
+    }
+  }
+}

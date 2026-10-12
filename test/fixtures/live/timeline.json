@@ -1,0 +1,82 @@
+{
+  "request": {
+    "path": "/api/projects/musepass-musepass/timeline",
+    "params": {
+      "limit": "5"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "4a6bba9e-c10c-4567-9434-347bbf8142ba",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "project": {
+        "slug": "musepass-musepass",
+        "name": "musepass",
+        "url": "https://heyresearch.xyz/project/musepass-musepass"
+      },
+      "lens": "everything",
+      "items": [
+        {
+          "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+          "kind": "code",
+          "at": "2026-10-02T14:13:07.000Z",
+          "precision": "WEEK",
+          "title": "Code changes, week of 2026-09-28 – 2026-10-04",
+          "summary": "5 active days in musepass/musepass.",
+          "recordedAt": "2026-10-01T00:16:50.907Z",
+          "eventType": "CODE_ACTIVITY",
+          "verification": "SOURCE_LINKED",
+          "countsAsBuilding": true,
+          "codeSubstance": {
+            "verdict": "SUBSTANTIVE",
+            "classifierVersion": "commit-substance-v3",
+            "countsAsBuilding": true,
+            "commitsListed": 225,
+            "commitsRead": 5,
+            "changedCode": 3,
+            "documentationOrMaintenance": 2,
+            "substanceUnknown": 0,
+            "notRead": 220,
+            "files": {
+              "source": 7,
+              "test": 2,
+              "docs": 2,
+              "readme": 1,
+              "dependency": 0,
+              "config": 1,
+              "ci": 0,
+              "generated": 0,
+              "asset": 0,
+              "whitespace": 0,
+              "rename": 0,
+              "data": 0,
+              "unknown": 0
+            },
+            "weekFullyListed": true,
+            "automatedCommits": 0,
+            "sampled": true,
+            "basis": null,
+            "summary": "This week HEY looked inside 5 of 225 commits to see what changed: 3 changed code, 2 documentation or maintenance only. In a burst week, enough of a sample has to change code for the week to count."
+          },
+          "source": "https://github.com/musepass/musepass"
+        }
+      ],
+      "totals": {
+        "ships": 1,
+        "contractSource": 0,
+        "locks": 0,
+        "resumed": 0,
+        "marketIntegrity": 0,
+        "verification": 0
+      },
+      "total": 1,
+      "truncated": false,
+      "nextCursor": null,
+      "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+    }
+  }
+}

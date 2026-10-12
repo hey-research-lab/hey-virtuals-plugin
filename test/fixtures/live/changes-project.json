@@ -1,0 +1,258 @@
+{
+  "request": {
+    "path": "/api/agent/what_changed",
+    "params": {
+      "project": "musepass-musepass",
+      "days": "30",
+      "limit": "5",
+      "building": "only"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "8d54f02f-2e5d-4e4f-a8ad-af8642d96c40",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "schema": "hey.agent-intelligence-response",
+      "schemaVersion": "1",
+      "capability": "what_changed",
+      "status": "ok",
+      "query": {
+        "chainId": 4663,
+        "project": "musepass-musepass",
+        "days": 30,
+        "limit": 5,
+        "building": "only"
+      },
+      "chain": {
+        "chainId": 4663,
+        "name": "Robinhood Chain"
+      },
+      "subject": {
+        "kind": "project",
+        "project": {
+          "slug": "musepass-musepass",
+          "name": {
+            "text": "musepass",
+            "contentOrigin": "external_source",
+            "source": "project_record"
+          },
+          "url": "https://heyresearch.xyz/project/musepass-musepass"
+        }
+      },
+      "answer": {
+        "text": "1 change that count as building recorded for musepass-musepass in the last 30 days (1 week of code activity); showing the newest 1. HEY’s ledger records status moves and its other reclassifications only since 2026-09-26; before that they are absent here, not zero.",
+        "contentOrigin": "derived"
+      },
+      "answerStatus": "FACT",
+      "claims": [
+        {
+          "id": "window.counts_as_building",
+          "dimension": "build",
+          "statement": {
+            "text": "1 of 1 change counts toward activity status in the 30-day window.",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 1,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [
+            {
+              "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "sourceUrl": "https://github.com/musepass/musepass"
+            }
+          ],
+          "evidenceKind": "ledger_count"
+        },
+        {
+          "id": "window.build.code_activity",
+          "dimension": "build",
+          "statement": {
+            "text": "1 week of code activity in the 30-day window (build.code_activity).",
+            "contentOrigin": "derived"
+          },
+          "status": "FACT",
+          "value": 1,
+          "source": {
+            "name": "change ledger",
+            "type": "hey_record"
+          },
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "occurredAt": null,
+          "precision": "WINDOW",
+          "freshness": "live",
+          "evidence": [
+            {
+              "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+              "sourceUrl": "https://github.com/musepass/musepass"
+            }
+          ],
+          "evidenceKind": "ledger_count"
+        }
+      ],
+      "unknowns": [
+        {
+          "category": "INSUFFICIENT_EVIDENCE",
+          "dimension": "changeLedgerWindow",
+          "statement": {
+            "text": "The window starts 2026-09-12, before HEY’s ledger began recording status moves and reclassifications (2026-09-26). Releases and ships are indexed from their sources’ own history; the other transitions are not.",
+            "contentOrigin": "derived"
+          },
+          "doNotConclude": {
+            "text": "Do not read a count of status moves, resumptions or reclassifications as the whole window: the part before the ledger began recording them is absent, not zero.",
+            "contentOrigin": "hey"
+          },
+          "reason": "ledger_window_partial",
+          "asOf": "2026-09-26T11:32:48.791Z"
+        }
+      ],
+      "freshness": [
+        {
+          "family": "change_ledger",
+          "observedAt": "2026-10-12T19:50:01.462Z",
+          "dataAsOf": "2026-10-12T19:50:01.462Z",
+          "freshnessStatus": "live",
+          "staleAfterHours": 1,
+          "refresh": {
+            "job": "PROJECT_CHANGE_EVENTS",
+            "everyMinutes": 5,
+            "slowestMinutes": 5,
+            "basis": {
+              "text": "The ledger projector runs every 5 minutes and indexes what HEY recorded since its last run.",
+              "contentOrigin": "hey"
+            }
+          },
+          "nextExpectedRefresh": "2026-10-12T19:55:01.462Z"
+        }
+      ],
+      "evidence": [
+        {
+          "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+          "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+          "sourceUrl": "https://github.com/musepass/musepass"
+        }
+      ],
+      "data": {
+        "scope": "project",
+        "window": {
+          "days": 30,
+          "from": "2026-09-12T19:51:55.991Z",
+          "to": "2026-10-12T19:51:55.991Z",
+          "basis": "occurred_else_detected"
+        },
+        "types": null,
+        "total": 1,
+        "countsAsBuilding": 1,
+        "byType": [
+          {
+            "type": "build.code_activity",
+            "count": 1
+          }
+        ],
+        "shown": 1,
+        "items": [
+          {
+            "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+            "revision": 13,
+            "type": "build.code_activity",
+            "domain": "build",
+            "occurredAt": "2026-10-02T14:13:07.000Z",
+            "precision": "WEEK",
+            "detectedAt": "2026-10-01T00:16:50.907Z",
+            "recordedAt": "2026-10-03T09:40:09.410Z",
+            "summary": {
+              "text": "Code changes, week of 2026-09-28 – 2026-10-04",
+              "contentOrigin": "derived"
+            },
+            "status": "FACT",
+            "countsAsBuilding": true,
+            "verification": "SOURCE_LINKED",
+            "project": {
+              "slug": "musepass-musepass",
+              "url": "https://heyresearch.xyz/project/musepass-musepass"
+            },
+            "evidence": [
+              {
+                "id": "ship:4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+                "receiptUrl": "https://heyresearch.xyz/api/evidence/ship%3A4ec70ca8-a1c9-46a2-888b-f29a4f824de1",
+                "sourceUrl": "https://github.com/musepass/musepass"
+              }
+            ],
+            "source": "github"
+          }
+        ],
+        "ledger": {
+          "projectorRanAt": "2026-10-12T19:50:01.462Z",
+          "newestRecordedAt": "2026-10-12T19:50:01.462Z",
+          "collectionStart": "2026-09-26T11:35:57.227Z",
+          "transitionsFrom": "2026-09-26T11:32:48.791Z"
+        },
+        "more": "https://heyresearch.xyz/api/changes?project=musepass-musepass"
+      },
+      "methodology": {
+        "rules": [
+          {
+            "id": "agent_freshness",
+            "version": "agent-freshness-v2"
+          },
+          {
+            "id": "machine_text",
+            "version": "machine-text-v1"
+          }
+        ],
+        "url": "https://heyresearch.xyz/methodology"
+      },
+      "links": {
+        "self": "https://heyresearch.xyz/api/agent/what_changed?project=musepass-musepass&days=30&limit=5&building=only",
+        "page": "https://heyresearch.xyz/project/musepass-musepass",
+        "canonical": [
+          "https://heyresearch.xyz/api/changes?project=musepass-musepass"
+        ]
+      },
+      "citation": {
+        "kind": "hey_agent_answer",
+        "capability": "what_changed",
+        "schemaVersion": "1",
+        "url": "https://heyresearch.xyz/api/agent/what_changed?project=musepass-musepass&days=30&limit=5&building=only",
+        "asOf": "2026-10-12T19:51:55.991Z",
+        "project": "musepass-musepass"
+      },
+      "boundaries": {
+        "notAdvice": true,
+        "notProvided": [
+          "investment_recommendation",
+          "buy_or_sell_signal",
+          "price_prediction",
+          "price_target",
+          "position_size",
+          "leverage",
+          "stop_loss",
+          "ranking_by_expected_return",
+          "risk_score",
+          "safety_verdict",
+          "smart_money_label",
+          "wallet_pnl",
+          "wallet_profile"
+        ],
+        "marketIsContextOnly": true,
+        "disclaimer": {
+          "text": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts.",
+          "contentOrigin": "hey"
+        }
+      },
+      "asOf": "2026-10-12T19:51:55.991Z"
+    }
+  }
+}

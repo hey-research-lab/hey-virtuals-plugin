@@ -1,0 +1,22 @@
+{
+  "request": {
+    "path": "/api/projects/hey-virtuals-no-such-project/timeline",
+    "params": {
+      "limit": "5"
+    }
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "content-type": "application/json",
+      "x-request-id": "2591ea04-404f-4947-bed5-1f3d1558f1d1",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "error": "not_found",
+      "message": "No published project has the slug \"hey-virtuals-no-such-project\".",
+      "retryable": false,
+      "requestId": "2591ea04-404f-4947-bed5-1f3d1558f1d1"
+    }
+  }
+}

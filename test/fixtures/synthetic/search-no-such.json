@@ -1,0 +1,21 @@
+{
+  "_note": "Synthetic: hand-written to exercise a path the live API cannot be asked for politely. Shapes follow the public API.",
+  "request": {
+    "path": "/api/search/suggest",
+    "params": {
+      "q": "hey-virtuals-no-such-project"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "x-hey-api-version": "1"
+    },
+    "body": {
+      "q": "hey-virtuals-no-such-project",
+      "suggestions": [],
+      "moreLaunchRecords": false
+    }
+  }
+}

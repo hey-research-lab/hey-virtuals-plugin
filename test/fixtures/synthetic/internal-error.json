@@ -1,0 +1,23 @@
+{
+  "_note": "Synthetic: hand-written to exercise a path the live API cannot be asked for politely. Shapes follow the public API.",
+  "request": {
+    "path": "/api/chain",
+    "params": {
+      "days": "7"
+    }
+  },
+  "response": {
+    "status": 500,
+    "headers": {
+      "content-type": "application/json",
+      "x-hey-api-version": "1",
+      "x-request-id": "00000000-0000-4000-8000-000000000500"
+    },
+    "body": {
+      "error": "internal_error",
+      "message": "HEY failed; quote the request id.",
+      "requestId": "00000000-0000-4000-8000-000000000500",
+      "retryable": true
+    }
+  }
+}
