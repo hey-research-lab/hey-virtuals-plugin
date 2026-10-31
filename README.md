@@ -170,8 +170,9 @@ changes no status, score or order on HEY.
 
 **GAME (game-node plugins).**
 
-1. Publish this package to npm under `@hey-research-lab` (`npm publish <tarball> --access public`)
-   and push the repository to `github.com/hey-research-lab/hey-virtuals-plugin`.
+1. Done: the package is on npm as
+   [`@hey-research-lab/virtuals-plugin`](https://www.npmjs.com/package/@hey-research-lab/virtuals-plugin)
+   and this repository is public.
 2. Fork [game-by-virtuals/game-node](https://github.com/game-by-virtuals/game-node), add
    `plugins/heyResearchPlugin/` with a `README.md` (install, usage, functions, troubleshooting) and
    the [`plugin_metadata.yml`](plugin_metadata.yml) in this repository (filled from their
