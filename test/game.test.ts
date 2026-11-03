@@ -117,6 +117,44 @@ describe('GAME function responses', () => {
     if (prior !== undefined) process.env.HEY_API_KEY = prior;
   });
 
+  it('sends the environment key to heyresearch.xyz only; a custom baseUrl needs an explicit key', async () => {
+    const prior = process.env.HEY_API_KEY;
+    process.env.HEY_API_KEY = 'env-key-not-real';
+    try {
+      const authorization = async (options: Parameters<typeof heyResearchFunctions>[0]) => {
+        const calls: Call[] = [];
+        const [research] = heyResearchFunctions({
+          ...options,
+          fetchImpl: routeFetch(['research'], calls),
+        });
+        await research!.executable({ query: ids.slug }, silent);
+        return {
+          url: String(calls[0]?.url),
+          authorization: new Headers(calls[0]?.init?.headers).get('authorization'),
+        };
+      };
+      expect((await authorization({})).authorization).toBe('Bearer env-key-not-real');
+      expect((await authorization({ baseUrl: 'https://heyresearch.xyz' })).authorization).toBe(
+        'Bearer env-key-not-real',
+      );
+      const mock = await authorization({ baseUrl: 'https://hey-mock.example' });
+      expect(mock.url).toMatch(/^https:\/\/hey-mock\.example\//);
+      expect(mock.authorization).toBeNull();
+      expect((await authorization({ baseUrl: 'http://localhost:3000' })).authorization).toBeNull();
+      expect(
+        (
+          await authorization({
+            baseUrl: 'https://hey-mock.example',
+            apiKey: 'explicit-key-not-real',
+          })
+        ).authorization,
+      ).toBe('Bearer explicit-key-not-real');
+    } finally {
+      if (prior === undefined) delete process.env.HEY_API_KEY;
+      else process.env.HEY_API_KEY = prior;
+    }
+  });
+
   it('refuses another chain with unsupported_chain and makes no request', async () => {
     const calls: Call[] = [];
     const fns = functionsOver([], calls);

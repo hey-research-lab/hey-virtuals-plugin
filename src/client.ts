@@ -6,7 +6,9 @@ import { INTEGRATION } from './version.js';
 export type HeyPluginOptions = {
   /**
    * A HEY API key from heyresearch.xyz/account. Optional: it lifts the anonymous rate limit and
-   * nothing else. Defaults to `HEY_API_KEY` from the environment. Sent as a bearer token, never logged.
+   * nothing else. Defaults to `HEY_API_KEY` from the environment, which is sent to heyresearch.xyz
+   * only: with a custom `baseUrl`, pass the key here explicitly or none is sent. Sent as a bearer
+   * token, never logged.
    */
   apiKey?: string;
   /**
@@ -43,6 +45,9 @@ export function assertBaseUrl(value: string): string {
   return url.origin;
 }
 
+/** HEY's own origin: the only one the environment's `HEY_API_KEY` is ever sent to. */
+const HEY_ORIGIN = 'https://heyresearch.xyz';
+
 function envApiKey(): string | undefined {
   const value = typeof process === 'undefined' ? undefined : process.env.HEY_API_KEY;
   return value && value.trim() ? value.trim() : undefined;
@@ -50,9 +55,14 @@ function envApiKey(): string | undefined {
 
 export function createHeyClient(options: HeyPluginOptions = {}): HeyClient {
   if (options.client) return options.client;
-  const apiKey = options.apiKey?.trim() || envApiKey();
+  const baseUrl = options.baseUrl ? assertBaseUrl(options.baseUrl) : undefined;
+  // A key passed in the options goes to the origin passed beside it; a key from the environment goes
+  // to heyresearch.xyz only, so pointing the plugin at a mock or a proxy never sends the host's real key.
+  const apiKey =
+    options.apiKey?.trim() ||
+    (baseUrl === undefined || baseUrl === HEY_ORIGIN ? envApiKey() : undefined);
   return new HeyClient({
-    ...(options.baseUrl ? { baseUrl: assertBaseUrl(options.baseUrl) } : {}),
+    ...(baseUrl ? { baseUrl } : {}),
     ...(apiKey ? { apiKey } : {}),
     ...(options.fetchImpl ? { fetchImpl: options.fetchImpl } : {}),
     ...(options.timeoutMs ? { timeoutMs: options.timeoutMs } : {}),

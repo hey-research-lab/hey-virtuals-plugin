@@ -93,7 +93,8 @@ Source: HEY Research Lab — heyresearch.xyz · https://heyresearch.xyz/project/
 ```
 
 `heyResearchWorker(options)` takes `apiKey`, `baseUrl` (tests and local mocks only: `https:` or
-`http://localhost`), `fetchImpl`, `timeoutMs`, `client`, and `id` / `name` / `description` /
+`http://localhost`; the environment's `HEY_API_KEY` goes to heyresearch.xyz only, so a custom `baseUrl`
+needs an explicit `apiKey`), `fetchImpl`, `timeoutMs`, `client`, and `id` / `name` / `description` /
 `getEnvironment` overrides. `heyResearchFunctions(options)` returns the five `GameFunction`s for
 your own worker. The framework-neutral reads (`researchProject`, `findProjects`, `recentChanges`,
 `projectTimeline`, `chainOverview`) are exported too.
