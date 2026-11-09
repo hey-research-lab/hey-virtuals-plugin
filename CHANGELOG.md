@@ -4,7 +4,7 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
-## 0.1.1 — unreleased (not yet on npm)
+## 0.1.1 — 2026-11-03
 
 - Security: `HEY_API_KEY` from the environment is sent to `https://heyresearch.xyz` only. With a custom
   `baseUrl` (a mock, a proxy, a local server) no key is sent unless the caller passes `apiKey`
