@@ -1,7 +1,7 @@
 {
   "name": "@hey-research-lab/virtuals-plugin",
   "version": "0.1.1",
-  "description": "Virtuals Protocol GAME worker and ACP provider scaffold for HEY Research Lab: evidence-backed builder research on Robinhood Chain projects, tickers and contracts \u2014 still building, what shipped, what is unknown.",
+  "description": "Virtuals Protocol GAME worker and ACP provider scaffold for HEY Research Lab: evidence-backed builder research on Robinhood Chain projects, tickers and contracts — still building, what shipped, what is unknown.",
   "license": "MIT",
   "author": "HEY Research Lab",
   "type": "module",
@@ -96,7 +96,12 @@
   },
   "pnpm": {
     "overrides": {
-      "esbuild": "^0.28.1"
+      "esbuild": "^0.28.1",
+      "follow-redirects": "^1.16.2",
+      "fast-uri": "^3.1.9",
+      "ws@>=8.0.0 <8.21.0": "^8.21.0",
+      "js-cookie": "^3.0.7",
+      "uuid@<11.1.1": "^11.1.1"
     }
   }
 }
