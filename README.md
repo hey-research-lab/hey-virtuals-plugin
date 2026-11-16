@@ -230,6 +230,8 @@ enabled ACP seller, the ACP SDK's own connections). No files are read or written
 beyond the allowed set, with why: `@virtuals-protocol/game` (the framework this plugs into) and,
 optional, `@virtuals-protocol/acp-node-v2` (the ACP client, loaded only when the seller starts).
 
+HEY Research Lab also reviews other projects' code and reports what it finds privately first: [security credits](https://github.com/hey-research-lab#security-credits).
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Tests run offline over saved fixtures with the network
