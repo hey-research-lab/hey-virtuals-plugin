@@ -4,6 +4,13 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## 0.1.2 — 2026-11-24
+
+- Security: dependency updates (the development install no longer pulls `alchemy-sdk`, an optional
+  dependency of `@virtuals-protocol/acp-node-v2`'s `@account-kit/infra`, and with it `elliptic`
+  (GHSA-848j-6mx2-7j84) and `stream-json` 1.x (via `jayson`); a pnpm override drops it). The
+  published package's runtime dependencies are unchanged.
+
 ## 0.1.1 — 2026-11-03
 
 - Security: `HEY_API_KEY` from the environment is sent to `https://heyresearch.xyz` only. With a custom
