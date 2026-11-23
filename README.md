@@ -20,7 +20,7 @@ HEY first. It reads only HEY's public API, through the published
 
 ## Why Robinhood Chain only
 
-HEY researches one chain: Robinhood Chain, chain id `4663` (`eip155:4663`). Every function takes
+HEY's API and this plugin answer for one chain: Robinhood Chain, chain id `4663` (`eip155:4663`). Every function takes
 an optional `chain_id` that accepts `4663` or `eip155:4663` only; anything else is refused with
 `unsupported_chain` ("HEY supports Robinhood Chain (4663) only; chain X is not supported.") before
 any request. The ACP provider applies the same rule to a buyer's requirement. (Which chain an ACP
